@@ -74,10 +74,7 @@ class CommonTabbarController: UITabBarController, UITabBarControllerDelegate {
         }
         
         delegate = self
-        
-//        currentViewControllerTappedCount = 0
-//        currentTabIndex = 0
-        
+ 
         var viewControllers: [UIViewController] = []
         
         for index in 0..<TabbarViewControllerTags.allCases.count {
@@ -95,9 +92,9 @@ class CommonTabbarController: UITabBarController, UITabBarControllerDelegate {
         
         switch tag {
         case .userInfo:
-            viewController = ViewController()
+            viewController = IncidentTasksViewController()
         case .report:
-            viewController = UIViewController()
+            viewController = ViewController()
         case .tasks:
             viewController = UIViewController()
         }

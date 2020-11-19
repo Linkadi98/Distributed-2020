@@ -23,7 +23,23 @@
 		043DDDDA2564BD49007C30A8 /* CustomXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDDD92564BD49007C30A8 /* CustomXibView.swift */; };
 		043DDDDF2564C166007C30A8 /* BaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDDDE2564C166007C30A8 /* BaseListViewController.swift */; };
 		043DDDE42564C22C007C30A8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDDE32564C22C007C30A8 /* Reachability.swift */; };
+		04429FAC256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FA5256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf */; };
+		04429FAD256500EE00AAC4DE /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FA6256500EE00AAC4DE /* HelveticaNeue-Medium.ttf */; };
+		04429FAE256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FA7256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf */; };
+		04429FAF256500EE00AAC4DE /* HelveticaNeue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FA8256500EE00AAC4DE /* HelveticaNeue.ttf */; };
+		04429FB0256500EE00AAC4DE /* HelveticaNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FA9256500EE00AAC4DE /* HelveticaNeue-Italic.ttf */; };
+		04429FB1256500EE00AAC4DE /* HelveticaNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FAA256500EE00AAC4DE /* HelveticaNeue-Light.ttf */; };
+		04429FB2256500EE00AAC4DE /* HelveticaNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04429FAB256500EE00AAC4DE /* HelveticaNeue-Bold.ttf */; };
+		04429FDB25650BB600AAC4DE /* GlobalImportsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04429FDA25650BB600AAC4DE /* GlobalImportsSwift.swift */; };
+		04429FE725650C7F00AAC4DE /* IncidentTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04429FE625650C7F00AAC4DE /* IncidentTasksViewController.swift */; };
+		04429FEF25650CCA00AAC4DE /* NoPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04429FEE25650CCA00AAC4DE /* NoPermissionViewController.swift */; };
+		04429FFB25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04429FFA25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift */; };
+		0442A013256515CE00AAC4DE /* EmptyDataSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442A012256515CE00AAC4DE /* EmptyDataSetting.swift */; };
+		0442A02925652AC900AAC4DE /* UIView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442A02825652AC900AAC4DE /* UIView+Exts.swift */; };
 		046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D23302564F65F00A5D4CB /* AlertUtils.swift */; };
+		046FB19C25654BD300BEF95F /* UIViewController+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */; };
+		046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */; };
+		F5594FE18539A51502AF3A8B /* Pods_Distributed2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +82,24 @@
 		043DDDD92564BD49007C30A8 /* CustomXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibView.swift; sourceTree = "<group>"; };
 		043DDDDE2564C166007C30A8 /* BaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewController.swift; sourceTree = "<group>"; };
 		043DDDE32564C22C007C30A8 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		04429FA5256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-UltraLight.ttf"; sourceTree = "<group>"; };
+		04429FA6256500EE00AAC4DE /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; };
+		04429FA7256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04429FA8256500EE00AAC4DE /* HelveticaNeue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttf; sourceTree = "<group>"; };
+		04429FA9256500EE00AAC4DE /* HelveticaNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-Italic.ttf"; sourceTree = "<group>"; };
+		04429FAA256500EE00AAC4DE /* HelveticaNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-Light.ttf"; sourceTree = "<group>"; };
+		04429FAB256500EE00AAC4DE /* HelveticaNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-Bold.ttf"; sourceTree = "<group>"; };
+		04429FDA25650BB600AAC4DE /* GlobalImportsSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImportsSwift.swift; sourceTree = "<group>"; };
+		04429FE625650C7F00AAC4DE /* IncidentTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTasksViewController.swift; sourceTree = "<group>"; };
+		04429FEE25650CCA00AAC4DE /* NoPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionViewController.swift; sourceTree = "<group>"; };
+		04429FFA25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBorderWithPaddingTextField.swift; sourceTree = "<group>"; };
+		0442A012256515CE00AAC4DE /* EmptyDataSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetting.swift; sourceTree = "<group>"; };
+		0442A02825652AC900AAC4DE /* UIView+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exts.swift"; sourceTree = "<group>"; };
 		046D23302564F65F00A5D4CB /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
-		0829D2E16CAAAF8EDFC8F618 /* Pods-Distributed2020-Distributed2020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020-Distributed2020UITests.release.xcconfig"; path = "Target Support Files/Pods-Distributed2020-Distributed2020UITests/Pods-Distributed2020-Distributed2020UITests.release.xcconfig"; sourceTree = "<group>"; };
+		046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Exts.swift"; sourceTree = "<group>"; };
+		046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Exts.swift"; sourceTree = "<group>"; };
 		57BF01430E67F878D7B60D83 /* Pods-Distributed2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020.debug.xcconfig"; path = "Target Support Files/Pods-Distributed2020/Pods-Distributed2020.debug.xcconfig"; sourceTree = "<group>"; };
-		72635CF133E8DA6D9301D8CF /* Pods-Distributed2020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020Tests.release.xcconfig"; path = "Target Support Files/Pods-Distributed2020Tests/Pods-Distributed2020Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B1675BD48D0C97870B07874E /* Pods-Distributed2020-Distributed2020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020-Distributed2020UITests.debug.xcconfig"; path = "Target Support Files/Pods-Distributed2020-Distributed2020UITests/Pods-Distributed2020-Distributed2020UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CFC76C021AD4D0235EDCEF29 /* Pods-Distributed2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-Distributed2020Tests/Pods-Distributed2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Distributed2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D163EC823161DE1C674D6D39 /* Pods-Distributed2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020.release.xcconfig"; path = "Target Support Files/Pods-Distributed2020/Pods-Distributed2020.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5594FE18539A51502AF3A8B /* Pods_Distributed2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +132,7 @@
 		043DDD622564A036007C30A8 = {
 			isa = PBXGroup;
 			children = (
+				04429F7D2564FCCC00AAC4DE /* Resources */,
 				043DDDA22564A119007C30A8 /* Bases */,
 				043DDDA12564A067007C30A8 /* Modules */,
 				043DDD6D2564A036007C30A8 /* Distributed2020 */,
@@ -158,6 +188,7 @@
 		043DDDA12564A067007C30A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04429FE225650C0500AAC4DE /* IncidentsTasks */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -179,6 +210,8 @@
 				043DDDDE2564C166007C30A8 /* BaseListViewController.swift */,
 				043DDDAC2564A375007C30A8 /* CommonNavigationController.swift */,
 				043DDDBB2564A5F7007C30A8 /* CommonTabbarController.swift */,
+				04429FFA25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift */,
+				0442A012256515CE00AAC4DE /* EmptyDataSetting.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,13 +232,81 @@
 				043DDDD12564B728007C30A8 /* UIFont+Exts.swift */,
 				043DDDD92564BD49007C30A8 /* CustomXibView.swift */,
 				043DDDE32564C22C007C30A8 /* Reachability.swift */,
+				04429FEE25650CCA00AAC4DE /* NoPermissionViewController.swift */,
+				0442A02825652AC900AAC4DE /* UIView+Exts.swift */,
+				046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */,
+				046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04429F7D2564FCCC00AAC4DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04429F9B2564FFF600AAC4DE /* Fonts */,
+				04429FDA25650BB600AAC4DE /* GlobalImportsSwift.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04429F9B2564FFF600AAC4DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04429FA4256500EE00AAC4DE /* Helvetica_Neue */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		04429FA4256500EE00AAC4DE /* Helvetica_Neue */ = {
+			isa = PBXGroup;
+			children = (
+				04429FA5256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf */,
+				04429FA6256500EE00AAC4DE /* HelveticaNeue-Medium.ttf */,
+				04429FA7256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf */,
+				04429FA8256500EE00AAC4DE /* HelveticaNeue.ttf */,
+				04429FA9256500EE00AAC4DE /* HelveticaNeue-Italic.ttf */,
+				04429FAA256500EE00AAC4DE /* HelveticaNeue-Light.ttf */,
+				04429FAB256500EE00AAC4DE /* HelveticaNeue-Bold.ttf */,
+			);
+			path = Helvetica_Neue;
+			sourceTree = "<group>";
+		};
+		04429FE225650C0500AAC4DE /* IncidentsTasks */ = {
+			isa = PBXGroup;
+			children = (
+				04429FE525650C4C00AAC4DE /* Views */,
+				04429FE425650C4000AAC4DE /* ViewModels */,
+				04429FE325650C3900AAC4DE /* Controllers */,
+			);
+			path = IncidentsTasks;
+			sourceTree = "<group>";
+		};
+		04429FE325650C3900AAC4DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04429FE625650C7F00AAC4DE /* IncidentTasksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04429FE425650C4000AAC4DE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04429FE525650C4C00AAC4DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		981A62CE3BA0A0EA8912BEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,10 +316,6 @@
 			children = (
 				57BF01430E67F878D7B60D83 /* Pods-Distributed2020.debug.xcconfig */,
 				D163EC823161DE1C674D6D39 /* Pods-Distributed2020.release.xcconfig */,
-				B1675BD48D0C97870B07874E /* Pods-Distributed2020-Distributed2020UITests.debug.xcconfig */,
-				0829D2E16CAAAF8EDFC8F618 /* Pods-Distributed2020-Distributed2020UITests.release.xcconfig */,
-				CFC76C021AD4D0235EDCEF29 /* Pods-Distributed2020Tests.debug.xcconfig */,
-				72635CF133E8DA6D9301D8CF /* Pods-Distributed2020Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -249,7 +346,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043DDD982564A037007C30A8 /* Build configuration list for PBXNativeTarget "Distributed2020Tests" */;
 			buildPhases = (
-				A0FF9935C40D158825E8D127 /* [CP] Check Pods Manifest.lock */,
 				043DDD7D2564A036007C30A8 /* Sources */,
 				043DDD7E2564A036007C30A8 /* Frameworks */,
 				043DDD7F2564A036007C30A8 /* Resources */,
@@ -268,11 +364,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043DDD9B2564A037007C30A8 /* Build configuration list for PBXNativeTarget "Distributed2020UITests" */;
 			buildPhases = (
-				698CB06F3170451D744590EB /* [CP] Check Pods Manifest.lock */,
 				043DDD882564A036007C30A8 /* Sources */,
 				043DDD892564A036007C30A8 /* Frameworks */,
 				043DDD8A2564A036007C30A8 /* Resources */,
-				626B867EA60C6D09DE3EA0A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,8 +426,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				043DDD7B2564A036007C30A8 /* LaunchScreen.storyboard in Resources */,
+				04429FB0256500EE00AAC4DE /* HelveticaNeue-Italic.ttf in Resources */,
+				04429FAD256500EE00AAC4DE /* HelveticaNeue-Medium.ttf in Resources */,
+				04429FAE256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf in Resources */,
 				043DDD782564A036007C30A8 /* Assets.xcassets in Resources */,
 				043DDD762564A036007C30A8 /* Main.storyboard in Resources */,
+				04429FB2256500EE00AAC4DE /* HelveticaNeue-Bold.ttf in Resources */,
+				04429FAC256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf in Resources */,
+				04429FAF256500EE00AAC4DE /* HelveticaNeue.ttf in Resources */,
+				04429FB1256500EE00AAC4DE /* HelveticaNeue-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,67 +472,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Distributed2020/Pods-Distributed2020-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		626B867EA60C6D09DE3EA0A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Distributed2020-Distributed2020UITests/Pods-Distributed2020-Distributed2020UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Distributed2020-Distributed2020UITests/Pods-Distributed2020-Distributed2020UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Distributed2020-Distributed2020UITests/Pods-Distributed2020-Distributed2020UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		698CB06F3170451D744590EB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Distributed2020-Distributed2020UITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0FF9935C40D158825E8D127 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Distributed2020Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E02B8843EE2C0605BA48FED5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,18 +501,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0442A02925652AC900AAC4DE /* UIView+Exts.swift in Sources */,
 				043DDDD22564B728007C30A8 /* UIFont+Exts.swift in Sources */,
 				043DDDDF2564C166007C30A8 /* BaseListViewController.swift in Sources */,
 				043DDD732564A036007C30A8 /* ViewController.swift in Sources */,
+				0442A013256515CE00AAC4DE /* EmptyDataSetting.swift in Sources */,
 				043DDDC42564AB8D007C30A8 /* UIColor+Exts.swift in Sources */,
+				04429FFB25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift in Sources */,
 				043DDDA52564A2AE007C30A8 /* BaseViewController.swift in Sources */,
 				043DDDDA2564BD49007C30A8 /* CustomXibView.swift in Sources */,
 				043DDDBC2564A5F7007C30A8 /* CommonTabbarController.swift in Sources */,
+				04429FE725650C7F00AAC4DE /* IncidentTasksViewController.swift in Sources */,
+				046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */,
 				043DDDE42564C22C007C30A8 /* Reachability.swift in Sources */,
 				046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */,
 				043DDD6F2564A036007C30A8 /* AppDelegate.swift in Sources */,
 				043DDDAD2564A375007C30A8 /* CommonNavigationController.swift in Sources */,
+				04429FDB25650BB600AAC4DE /* GlobalImportsSwift.swift in Sources */,
+				046FB19C25654BD300BEF95F /* UIViewController+Exts.swift in Sources */,
 				043DDDB42564A3ED007C30A8 /* UIImage+Exts.swift in Sources */,
+				04429FEF25650CCA00AAC4DE /* NoPermissionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57BF01430E67F878D7B60D83 /* Pods-Distributed2020.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -657,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = minhpham.Distributed2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,6 +716,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D163EC823161DE1C674D6D39 /* Pods-Distributed2020.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -676,6 +727,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = minhpham.Distributed2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -683,7 +735,6 @@
 		};
 		043DDD992564A037007C30A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFC76C021AD4D0235EDCEF29 /* Pods-Distributed2020Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -705,7 +756,6 @@
 		};
 		043DDD9A2564A037007C30A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72635CF133E8DA6D9301D8CF /* Pods-Distributed2020Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -727,7 +777,6 @@
 		};
 		043DDD9C2564A037007C30A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1675BD48D0C97870B07874E /* Pods-Distributed2020-Distributed2020UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -747,7 +796,6 @@
 		};
 		043DDD9D2564A037007C30A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0829D2E16CAAAF8EDFC8F618 /* Pods-Distributed2020-Distributed2020UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

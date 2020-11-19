@@ -6,15 +6,8 @@ target 'Distributed2020' do
   use_frameworks!
 
   pod 'PureLayout'
-  # Pods for Distributed2020
-
-  target 'Distributed2020Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Distributed2020UITests' do
-    # Pods for testing
-  end
+  pod 'EmptyDataSet-Swift', '~> 5.0.0'
+  pod 'UIScrollView-InfiniteScroll', '~> 1.1.0'
+  pod 'NVActivityIndicatorView'
 
 end

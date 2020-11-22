@@ -4,12 +4,16 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
   - PureLayout (3.1.6)
+  - SwiftMessages (8.0.3):
+    - SwiftMessages/App (= 8.0.3)
+  - SwiftMessages/App (8.0.3)
   - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
   - EmptyDataSet-Swift (~> 5.0.0)
   - NVActivityIndicatorView
   - PureLayout
+  - SwiftMessages
   - UIScrollView-InfiniteScroll (~> 1.1.0)
 
 SPEC REPOS:
@@ -17,14 +21,16 @@ SPEC REPOS:
     - EmptyDataSet-Swift
     - NVActivityIndicatorView
     - PureLayout
+    - SwiftMessages
     - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
+  SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: 8bee26b78170acd2cea3b78046ebabd5adf75fe5
+PODFILE CHECKSUM: fb445cea4dcfa4a061b6e014ed88f78e4dd1264a
 
 COCOAPODS: 1.9.3

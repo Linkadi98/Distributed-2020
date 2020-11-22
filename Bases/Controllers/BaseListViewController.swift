@@ -179,12 +179,9 @@ class BaseListViewController<T>: BaseViewController {
             self?.searchTextDidChange(self?.searchField)
         }
         searchTitleView.cancelSearchAction = { [weak self] in
+            self?.searchField.text?.removeAll()
+            self?.refreshList()
             self?.hideSearchView()
-        }
-        
-        searchTitleView.cancelSearchAction = { [unowned self] in
-            self.searchField.text?.removeAll()
-            self.refreshList()
         }
         
         let searchItem = UIBarButtonItem(image: UIImage(named: "ic_search_bar_button")?.alwaysTemplate(),
@@ -446,11 +443,5 @@ class SearchTitleView: UIView {
     
     @objc private func didTapCancelButton() {
         cancelSearchAction?()
-    }
-    
-    @objc private func didTapBarcodeButton() {
-        if searchField.isFirstResponder {
-            searchField.resignFirstResponder()
-        }
     }
 }

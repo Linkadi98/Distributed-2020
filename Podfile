@@ -9,5 +9,6 @@ target 'Distributed2020' do
   pod 'EmptyDataSet-Swift', '~> 5.0.0'
   pod 'UIScrollView-InfiniteScroll', '~> 1.1.0'
   pod 'NVActivityIndicatorView'
+  pod 'SwiftMessages'
 
 end

@@ -93,11 +93,15 @@ class IncidentTasksViewModel {
         params.limit = PageSize.medium.value
         
         Repository.shared.getAllTasks(params: params, completion: {
-            if let response = try? $0.get(), let tasks = response.tasks, let metadata = response.metadata {
-                self.updateTasks?(tasks)
-                self.updateMetadata?(metadata)
-            } else {
+            switch $0 {
+            case .success(let response):
+                if let tasks = response.tasks, let metadata = response.metadata {
+                    self.updateTasks?(tasks)
+                    self.updateMetadata?(metadata)
+                }
+            case .failure(let error):
                 self.updateTasks?([])
+                AlertUtils.showError("Lỗi decode model nhé")
             }
         })
     }

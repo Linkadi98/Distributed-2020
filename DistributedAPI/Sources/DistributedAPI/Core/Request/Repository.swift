@@ -8,6 +8,8 @@
 import Foundation
 
 public class Repository {
+    
+    public var authorizationData = AuthorizationData(apiToken: "")
  
     public static let shared = Repository()
     
@@ -29,4 +31,6 @@ public class Repository {
     }()
     
     lazy var taskHandlerApi = TaskHandlerApi(httpClient: httpClient)
+    
+    lazy var authApi = AuthApi(httpClient: httpClient)
 }

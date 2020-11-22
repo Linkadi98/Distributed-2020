@@ -68,3 +68,35 @@ extension UIColor {
     static let discounted = UIColor(hex: "#EB3838")
 }
 
+extension UIColor {
+    
+    func lighter(by percentage: CGFloat = 0.3) -> UIColor? {
+        return self.adjust(by: abs(percentage * 100) )
+    }
+    
+    func darker(by percentage: CGFloat = 0.3) -> UIColor? {
+        return self.adjust(by: -1 * abs(percentage) )
+    }
+    
+    func adjust(by percentage: CGFloat = 0.3) -> UIColor? {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
+            return UIColor(red: min(red + percentage, 1.0),
+                           green: min(green + percentage, 1.0),
+                           blue: min(blue + percentage, 1.0),
+                           alpha: alpha)
+        } else {
+            return nil
+        }
+    }
+    
+    var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        return (red, green, blue, alpha)
+    }
+}

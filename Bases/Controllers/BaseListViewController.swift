@@ -10,6 +10,7 @@ import UIKit
 import EmptyDataSet_Swift
 import UIScrollView_InfiniteScroll
 import NVActivityIndicatorView
+import DistributedAPI
 
 class BaseListViewController<T>: BaseViewController {
     
@@ -30,8 +31,14 @@ class BaseListViewController<T>: BaseViewController {
     
     var customTitleView: UIView?
     
+    var tableViewEmtpyAttributedString: NSAttributedString?
+    var tableViewEmtpyDescriptionAttributedString: NSAttributedString?
+    var tableViewEmtpySearchResultAttributedString: NSAttributedString?
+    
     var leftBarButtons: [UIBarButtonItem]?
     var rightBarButtons: [UIBarButtonItem]?
+    
+    var refreshIndicator: UIRefreshControl!
     
     var searchPlaceHolder: String? {
         didSet {
@@ -76,12 +83,18 @@ class BaseListViewController<T>: BaseViewController {
     }
     
     var isSearching: Bool {
-        return searchText?.isEmpty ?? false
+        return !(searchText?.isEmpty ?? true)
     }
     
     var shouldDisplayEmptyDataSet: Bool {
         !isRefreshing && !isSearching
     }
+    
+    var shouldDisplaySearchEmptyText: Bool {
+        !isRefreshing && isSearching
+    }
+    
+    private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,11 +104,16 @@ class BaseListViewController<T>: BaseViewController {
     
     private func setupViews() {
         view.addSubview(loadingIndicator)
+        view.backgroundColor = .white
         loadingIndicator.autoCenterInSuperview()
         loadingIndicator.isHidden = false
         
         customTitleView = navigationItem.titleView
         buildSearchView()
+        
+        refreshIndicator = .init()
+        tableView.addSubview(refreshIndicator)
+        refreshIndicator.addTarget(self, action: #selector(refreshControlDidChange), for: .valueChanged)
     }
     
     private func setupTableView() {
@@ -107,6 +125,8 @@ class BaseListViewController<T>: BaseViewController {
         
         tableView.delegate = self as? UITableViewDelegate
         tableView.dataSource = self as? UITableViewDataSource
+        
+        tableView.backgroundColor = .white
         
         if let settings = emptyDataViewSetting {
             tableView.emptyDataSetView { (emptyView) in
@@ -162,20 +182,58 @@ class BaseListViewController<T>: BaseViewController {
             self?.hideSearchView()
         }
         
-        let searchItem = UIBarButtonItem(image: UIImage(named: "ic_search_bar_button"),
+        searchTitleView.cancelSearchAction = { [unowned self] in
+            self.searchField.text?.removeAll()
+            self.refreshList()
+        }
+        
+        let searchItem = UIBarButtonItem(image: UIImage(named: "ic_search_bar_button")?.alwaysTemplate(),
                                          style: .plain,
                                          target: self,
                                          action: #selector(showSearchView))
         navigationItem.rightBarButtonItems = [ searchItem ]
+        navigationItem.rightBarButtonItem?.tintColor = .icon
         
         self.searchField = searchTitleView?.searchField
     }
     
     private func searchTextDidChange(_ searchField: UITextField?) {
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.5,
+                                     target: self,
+                                     selector: #selector(searchingTimeDidFire),
+                                     userInfo: nil, repeats: false)
+        refreshList()
+    }
+    
+    @objc internal func searchingTimeDidFire() {
+        
+    }
+    
+    @objc private func refreshControlDidChange() {
+        refreshIndicator.endRefreshing()
+        
+        if !isRefreshing {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                self.refreshList()
+            }
+        }
+    }
+    
+    internal func refreshList() {
         page = 1
-        
         clearList()
-        
+        tableView.reloadData()
+        isRefreshing = true
+    }
+    
+    internal func updatePage(from metadata: MetadataModel?) {
+        if list.count < (metadata?.total ?? 0) {
+            page = (metadata?.page ?? page) + 1
+        } else {
+            page = -1
+        }
     }
     
     private func hideSearchView() {
@@ -249,12 +307,58 @@ class BaseListViewController<T>: BaseViewController {
         }
     }
     
+    // MARK: - Empty Data Set
     @objc func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
         return list.count > 0
     }
 
     @objc func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
         return !isRefreshing
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView, didTapView view: UIView) {
+       refreshList()
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        
+        if shouldDisplayEmptyDataSet {
+            return tableViewEmtpyAttributedString
+        }
+        
+        if shouldDisplaySearchEmptyText {
+            return tableViewEmtpySearchResultAttributedString
+        }
+        
+        return nil
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        if shouldDisplayEmptyDataSet {
+            return nil
+        }
+        
+        if shouldDisplaySearchEmptyText {
+            return UIImage(named: "ic_search")?.alwaysTemplate()
+        }
+        
+        return nil
+    }
+    
+    func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        return .text
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        if shouldDisplayEmptyDataSet {
+            return tableViewEmtpyDescriptionAttributedString
+        }
+        
+        return nil
+    }
+    
+    func backgroundColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        .white
     }
     
     @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -34,17 +34,18 @@ public protocol EndpointMakable {
 
 public enum EndpointPool: EndpointMakable {
     case dsd08
+    case authentication
     
     public var port: Int? {
         switch self {
-        case .dsd08:
+        case .dsd08, .authentication:
             return nil
         }
     }
     
     public var scheme: String {
         switch self {
-        case .dsd08:
+        case .dsd08, .authentication:
             return "https"
         }
     }
@@ -53,6 +54,8 @@ public enum EndpointPool: EndpointMakable {
         switch self {
         case .dsd08:
             return ("distributed-dsd08.herokuapp.com", "/api")
+        case .authentication:
+            return ("distributed.de-lalcool.com", "/api")
         }
     }
 }
@@ -112,14 +115,14 @@ class URLRequestBuilder {
     private func buildAuthorizationHeader(from header: [String: String]?) -> [String: String]? {
         var defaultHeader: [String: String] = [:]
         defaultHeader[ApiContants.contentType] = ApiContants.applicationJson
-        
+        defaultHeader[ApiContants.apiToken] = Repository.shared.authorizationData.apiToken
         
         return defaultHeader.joined(header ?? [:])
     }
 }
 
 extension URLRequest {
-    static func defaultRequest(token: String? = nil,
+    static func defaultRequest(endpoint: EndpointPool = .dsd08, token: String? = nil,
                                path: String,
                                method: HTTPMethod,
                                body: Data? = nil,
@@ -130,7 +133,7 @@ extension URLRequest {
             /// for token
         }
         
-        return URLRequestBuilder(endpoint: .dsd08).configUrl(path: path,
+        return URLRequestBuilder(endpoint: endpoint).configUrl(path: path,
                                                              method: method,
                                                              body: body,
                                                              headers: header,

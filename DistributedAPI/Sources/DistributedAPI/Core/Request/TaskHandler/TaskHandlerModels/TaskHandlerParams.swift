@@ -8,12 +8,18 @@
 import Foundation
 
 public struct TaskHandlerParams: Params {
-    public let id: Int?
+    public init() {}
+    
+    public var id: Int?
+    public var page: Int?
+    public var limit: Int?
     
     func customParams() -> Parameters {
         var params: Parameters = [:]
         
         params["id"] = id
+        params["page"] = page
+        params["limit"] = limit
         
         return params
     }

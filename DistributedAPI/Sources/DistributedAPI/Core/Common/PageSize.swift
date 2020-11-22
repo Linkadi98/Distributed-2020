@@ -13,7 +13,7 @@ public enum PageSize {
     case large
     case custom(Int)
     
-    var value: Int {
+    public var value: Int {
         switch self {
         case .small:
             return 10

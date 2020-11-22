@@ -15,27 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return window
     }()
     
+    static var shared: AppDelegate = AppDelegate()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        prepareShowingTabbarController()
+        prepareRootViewController()
         setupReachability()
         return true
     }
     
-    private func getRootViewController() -> UIViewController {
-        let tabbarController = CommonTabbarController()
+    private func getRootViewController() -> UIViewController? {
+        return window?.rootViewController
+    }
+    
+    private func prepareRootViewController() {
+        if let loginController = getLoginController() {
+            replaceRootViewController(by: loginController)
+            return
+        }
         
-        return tabbarController
+        let tabbarController = CommonTabbarController()
+        replaceRootViewController(by: tabbarController)
     }
     
-    private func prepareShowingTabbarController() {
-        window?.rootViewController = getRootViewController()
+    func replaceRootViewController(by viewController: UIViewController) {
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-    }
-    
-    private var presentingViewController: UIViewController? {
-        getRootViewController().presentingViewController
     }
     
     private var reachability: Reachability?
@@ -44,16 +50,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         reachability?.stopNotifier()
         reachability = Reachability(hostname: "google.com.vn")
         do {
-            reachability?.whenUnreachable = { [weak self] reachability in
+            reachability?.whenUnreachable = { reachability in
                 AlertUtils.showAlert(title: "Mất kết nối mạng", message: "Vui lòng kiểm tra kết nối mạng")
             }
-            reachability?.whenReachable = { [weak self] _ in
+            reachability?.whenReachable = {  _ in
                 
             }
             try reachability?.startNotifier()
         } catch {
             
         }
+    }
+    
+    private func getLoginController() -> UIViewController? {
+        if !AccountManager.shared.isLoggedIn {
+            return LoginViewController()
+        }
+        
+        return nil
     }
 }
 

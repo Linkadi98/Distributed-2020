@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040D25B42569405A00746AAD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D25B32569405A00746AAD /* LoginViewController.swift */; };
+		040D25BD2569414F00746AAD /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D25BC2569414F00746AAD /* ColoredButton.swift */; };
 		043DDD6F2564A036007C30A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDD6E2564A036007C30A8 /* AppDelegate.swift */; };
 		043DDD732564A036007C30A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDD722564A036007C30A8 /* ViewController.swift */; };
 		043DDD762564A036007C30A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DDD742564A036007C30A8 /* Main.storyboard */; };
@@ -36,6 +38,10 @@
 		04429FFB25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04429FFA25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift */; };
 		0442A013256515CE00AAC4DE /* EmptyDataSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442A012256515CE00AAC4DE /* EmptyDataSetting.swift */; };
 		0442A02925652AC900AAC4DE /* UIView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442A02825652AC900AAC4DE /* UIView+Exts.swift */; };
+		04468D20256948EB00269CA0 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04468D1F256948EB00269CA0 /* AccountManager.swift */; };
+		04468D2525694A0B00269CA0 /* DistributedAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 04468D2425694A0B00269CA0 /* DistributedAPI */; };
+		04468D2A25696BBD00269CA0 /* UserDefault+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */; };
+		04468D2F25697EFC00269CA0 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04468D2E25697EFC00269CA0 /* String+Exts.swift */; };
 		046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D23302564F65F00A5D4CB /* AlertUtils.swift */; };
 		046FB19C25654BD300BEF95F /* UIViewController+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */; };
 		046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */; };
@@ -60,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040D25B32569405A00746AAD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		040D25BC2569414F00746AAD /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		043DDD6B2564A036007C30A8 /* Distributed2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Distributed2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DDD6E2564A036007C30A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DDD722564A036007C30A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,9 @@
 		04429FFA25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBorderWithPaddingTextField.swift; sourceTree = "<group>"; };
 		0442A012256515CE00AAC4DE /* EmptyDataSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSetting.swift; sourceTree = "<group>"; };
 		0442A02825652AC900AAC4DE /* UIView+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exts.swift"; sourceTree = "<group>"; };
+		04468D1F256948EB00269CA0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Exts.swift"; sourceTree = "<group>"; };
+		04468D2E25697EFC00269CA0 /* String+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
 		046D23302564F65F00A5D4CB /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Exts.swift"; sourceTree = "<group>"; };
 		046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Exts.swift"; sourceTree = "<group>"; };
@@ -109,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5594FE18539A51502AF3A8B /* Pods_Distributed2020.framework in Frameworks */,
+				04468D2525694A0B00269CA0 /* DistributedAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040D25B22569404100746AAD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				040D25B32569405A00746AAD /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		040D25BB2569414000746AAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				040D25BC2569414F00746AAD /* ColoredButton.swift */,
+				04468D1F256948EB00269CA0 /* AccountManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		043DDD622564A036007C30A8 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +217,7 @@
 		043DDDA12564A067007C30A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				040D25B22569404100746AAD /* Login */,
 				04429FE225650C0500AAC4DE /* IncidentsTasks */,
 			);
 			path = Modules;
@@ -196,6 +226,7 @@
 		043DDDA22564A119007C30A8 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
+				040D25BB2569414000746AAD /* Common */,
 				043DDDB22564A3D4007C30A8 /* Helpers */,
 				043DDDB12564A3C5007C30A8 /* Utils */,
 				043DDDA32564A29D007C30A8 /* Controllers */,
@@ -236,6 +267,8 @@
 				0442A02825652AC900AAC4DE /* UIView+Exts.swift */,
 				046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */,
 				046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */,
+				04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */,
+				04468D2E25697EFC00269CA0 /* String+Exts.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -338,6 +371,9 @@
 			dependencies = (
 			);
 			name = Distributed2020;
+			packageProductDependencies = (
+				04468D2425694A0B00269CA0 /* DistributedAPI */,
+			);
 			productName = Distributed2020;
 			productReference = 043DDD6B2564A036007C30A8 /* Distributed2020.app */;
 			productType = "com.apple.product-type.application";
@@ -501,9 +537,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040D25B42569405A00746AAD /* LoginViewController.swift in Sources */,
 				0442A02925652AC900AAC4DE /* UIView+Exts.swift in Sources */,
 				043DDDD22564B728007C30A8 /* UIFont+Exts.swift in Sources */,
+				04468D20256948EB00269CA0 /* AccountManager.swift in Sources */,
+				04468D2A25696BBD00269CA0 /* UserDefault+Exts.swift in Sources */,
 				043DDDDF2564C166007C30A8 /* BaseListViewController.swift in Sources */,
+				040D25BD2569414F00746AAD /* ColoredButton.swift in Sources */,
 				043DDD732564A036007C30A8 /* ViewController.swift in Sources */,
 				0442A013256515CE00AAC4DE /* EmptyDataSetting.swift in Sources */,
 				043DDDC42564AB8D007C30A8 /* UIColor+Exts.swift in Sources */,
@@ -515,6 +555,7 @@
 				046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */,
 				043DDDE42564C22C007C30A8 /* Reachability.swift in Sources */,
 				046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */,
+				04468D2F25697EFC00269CA0 /* String+Exts.swift in Sources */,
 				043DDD6F2564A036007C30A8 /* AppDelegate.swift in Sources */,
 				043DDDAD2564A375007C30A8 /* CommonNavigationController.swift in Sources */,
 				04429FDB25650BB600AAC4DE /* GlobalImportsSwift.swift in Sources */,
@@ -853,6 +894,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04468D2425694A0B00269CA0 /* DistributedAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DistributedAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 043DDD632564A036007C30A8 /* Project object */;
 }

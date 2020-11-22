@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 enum TabbarViewControllerTags: Int, CaseIterable {
-    case userInfo = 0
+    case tasks = 0
+    case userInfo
     case report
-    case tasks
     
     var tabbarItemImageName: String {
         switch self {
@@ -20,18 +20,18 @@ enum TabbarViewControllerTags: Int, CaseIterable {
         case .report:
             return ""
         case .tasks:
-            return ""
+            return "ic_incident"
         }
     }
     
     var tabbarItemTitle: String {
         switch self {
         case .userInfo:
-            return "1"
+            return ""
         case .report:
             return "2"
         case .tasks:
-            return "3"
+            return "Danh sách sự cố"
         }
     }
 }
@@ -92,15 +92,14 @@ class CommonTabbarController: UITabBarController, UITabBarControllerDelegate {
         
         switch tag {
         case .userInfo:
-            viewController = IncidentTasksViewController()
-        case .report:
-            viewController = ViewController()
-        case .tasks:
             viewController = UIViewController()
+        case .report:
+            viewController = UIViewController()
+        case .tasks:
+            viewController = IncidentTasksViewController()
         }
         
-        
-        viewController.tabBarItem.image = UIImage(named: "ic_example")
+        viewController.tabBarItem.image = UIImage(named: tag.tabbarItemImageName)?.alwaysTemplate()
         viewController.tabBarItem.title = tag.tabbarItemTitle
         
         return isRootViewController

@@ -10,4 +10,5 @@ import Foundation
 struct ApiContants {
     static let contentType = "Content-Type"
     static let applicationJson = "application/json"
+    static let apiToken = "api_token"
 }

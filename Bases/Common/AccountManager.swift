@@ -9,14 +9,26 @@ import Foundation
 import DistributedAPI
 
 struct SavedAccount {
-    let account: Account
+    let employee: Employee?
     
     var token: String? {
-        account.apiToken
+        employee?.apiToken
     }
     
     var name: String? {
-        account.fullName
+        employee?.fullName
+    }
+    
+    var projectType: String? {
+        employee?.type
+    }
+    
+    var createdDate: String? {
+        employee?.createdAt?.toString(format: .customDateTimeSecWithoutZone)
+    }
+    
+    var role: String? {
+        employee?.role?.lowercased()
     }
 }
 
@@ -29,12 +41,13 @@ class AccountManager {
     private final let currentAccountKey = "currentAccountKey"
     
     private init() {
-        getLoggedInAccount()
+        getLastLoggedInEmployeeInfo()
     }
     
     var currentAccount: SavedAccount? {
         didSet {
-            let authorizationData = AuthorizationData(apiToken: currentAccount?.token)
+            let authorizationData = AuthorizationData(apiToken: currentAccount?.token,
+                                                      projectType: currentAccount?.projectType)
             Repository.shared.authorizationData = authorizationData
         }
     }
@@ -43,16 +56,21 @@ class AccountManager {
         return currentAccount != nil
     }
     
-    func save(_ account: Account?) {
-        guard let account = account else { return }
+    func save(_ employeeInfo: Employee?) {
+        guard let employeeInfo = employeeInfo else { return }
+        currentAccount = SavedAccount(employee: employeeInfo)
         
-        userDefault.save(withKey: currentAccountKey, value: account)
+        userDefault.removeObject(forKey: currentAccountKey)
+        userDefault.save(withKey: currentAccountKey, value: employeeInfo)
     }
     
-    func getLoggedInAccount() {
-        if let lastLoginAccount = userDefault.load(withKey: currentAccountKey, type: Account.self) {
-            currentAccount = SavedAccount(account: lastLoginAccount)
-            print(currentAccount)
+    func getLastLoggedInEmployeeInfo() {
+        if let lastLoginAccount = userDefault.load(withKey: currentAccountKey, type: Employee.self) {
+            currentAccount = SavedAccount(employee: lastLoginAccount)
         }
+    }
+    
+    func removeCurrentEmployee() {
+        userDefault.removeObject(forKey: currentAccountKey)
     }
 }

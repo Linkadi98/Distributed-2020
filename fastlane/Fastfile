@@ -21,15 +21,15 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
 
-  lane :beta do
-  sync_code_signing(type: "appstore")
-  get_certificates           # invokes cert
-  get_provisioning_profile   # invokes sigh
-  build_app(scheme: "Distributed2020",
-            workspace: "Distributed2020.xcworkspace",
-            include_bitcode: true,
-            export_xcargs: "-allowProvisioningUpdates")
-  upload_to_testflight
-  slack(message: "Successfully distributed a new beta build")
-  end
+    lane :beta do  
+    # Put any actions you'd want here, for instance:
+    # Use cert to generate a certificate
+    cert
+    # Use sigh to download or generate a provisioning profile
+    sigh
+    # Use gym to archive your app
+    gym
+    # Use pilot to upload your app to testflight
+    pilot(distribute_external: false)
+  end  
 end

@@ -19,7 +19,7 @@ class AuthUrlRequestBuilder: BaseRequestBuilder<AuthUrlCases> {
     override func build() -> URLRequest {
         switch urlCase {
         case .login:
-            return .defaultRequest(endpoint: .authentication, path: "/login", method: .post)
+            return .defaultRequest(endpoint: .dsd08, path: "/employee/login", method: .post)
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 public class Repository {
     
-    public var authorizationData = AuthorizationData(apiToken: "")
+    public var authorizationData = AuthorizationData()
  
     public static let shared = Repository()
     
@@ -33,4 +33,19 @@ public class Repository {
     lazy var taskHandlerApi = TaskHandlerApi(httpClient: httpClient)
     
     lazy var authApi = AuthApi(httpClient: httpClient)
+}
+
+extension Repository {
+    
+    func handleResponse<T: Codable>(_ result: Result<T, Error>, completion: (Result<T, DataError>) -> Void) {
+        switch result {
+        case .success(let response):
+            completion(.success(response))
+        case .failure(let error):
+            if let data = (error as? CombineResponseErrorAndData)?.dataError {
+                let dataError = (try? JSONDecoder.shared.decode(DataError.self, from: data)) ?? DataError(error: nil)
+                completion(.failure(dataError))
+            }
+        }
+    }
 }

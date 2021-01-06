@@ -38,6 +38,11 @@ class IncidentTasksViewController: BaseListViewController<Task>, EmptyDataSetSou
         
         isRefreshing = true
         
+        tableView.registerNib(for: TaskTableViewCell.self)
+        tableView.allowsSelection = false
+        tableView.rowHeight = 50
+        tableView.separatorColor = .line
+        
         viewModel.getData(page: page, searchText: searchText)
     }
     
@@ -74,11 +79,14 @@ class IncidentTasksViewController: BaseListViewController<Task>, EmptyDataSetSou
         viewModel.updateMetadata = { [weak self] metadata in
             self?.updatePage(from: metadata)
         }
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(type: TaskTableViewCell.self, for: indexPath)
+        
+        let task = list[indexPath.row]
+        cell.updateCell(name: task.taskType?.name ?? "", status: task.statusText ?? "")
+        return cell
     }
 }
 
@@ -86,22 +94,15 @@ class IncidentTasksViewModel {
     
     var updateTasks: (([Task]) -> Void)?
     var updateMetadata: ((MetadataModel) -> Void)?
+    
     func getData(page: Int, searchText: String?) {
-        var params = TaskHandlerParams()
-        params.id = 11111
-        params.page = page
-        params.limit = PageSize.medium.value
-        
-        Repository.shared.getAllTasks(params: params, completion: {
+        Repository.shared.getEmployeeDetail(completion: {
             switch $0 {
             case .success(let response):
-                if let tasks = response.tasks, let metadata = response.metadata {
-                    self.updateTasks?(tasks)
-                    self.updateMetadata?(metadata)
-                }
-            case .failure(let error):
+                let tasks = response.pendingTasks ?? []
+                self.updateTasks?(tasks)
+            case .failure:
                 self.updateTasks?([])
-                AlertUtils.showError("Lỗi decode model nhé")
             }
         })
     }

@@ -10,7 +10,7 @@ import Foundation
 extension UIView {
     
     var nibName: String {
-        return String(describing: self)
+        return String(describing: type(of: self))
     }
 
     func animateFadeIn(withDuration duration: TimeInterval,

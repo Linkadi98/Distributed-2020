@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 AlertUtils.showAlert(title: "Mất kết nối mạng", message: "Vui lòng kiểm tra kết nối mạng")
             }
             reachability?.whenReachable = {  _ in
-                
+                NotificationCenter.default.post(.init(name: .backOnline))
             }
             try reachability?.startNotifier()
         } catch {

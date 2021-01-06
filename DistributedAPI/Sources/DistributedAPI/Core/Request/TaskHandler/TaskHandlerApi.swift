@@ -22,4 +22,22 @@ class TaskHandlerApi {
                                   completion: completion)
         
     }
+    
+    func getEmployeeDetail(completion: @escaping (Result<EmployeeDetailResponse, Error>) -> Void) -> CancellableRequest {
+        return client.makeRequest(request: TaskHandlerUrlBuilder(urlCase: .getEmployeeDetail).build(), completion: completion)
+    }
+    
+    func activeCurrentTask(id: Int, completion: @escaping (Result<EmptyResponse, Error>) -> Void) -> CancellableRequest {
+        return client.makeRequest(request: TaskHandlerUrlBuilder(urlCase: .activeCurrentTask(id: id)).build(),
+                                  completion: completion)
+    }
+    
+    func sendReportInfo(data: ReportData, comletion: @escaping ((Result<EmptyResponse, Error>) -> Void)) -> CancellableRequest {
+        let formDataBuilder = MultipartFormDataBuilder()
+        
+        let formData = data.toMultipartFormData()
+        
+        return client.makeRequest(request: TaskHandlerUrlBuilder(urlCase: .sendReportInfo(formData: formData)).build(),
+                                  completion: comletion)
+    }
 }

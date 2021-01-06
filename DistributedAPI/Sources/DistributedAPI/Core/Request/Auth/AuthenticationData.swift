@@ -18,7 +18,11 @@ public struct LoginRequest: Encodable {
 }
 
 public struct AccountResponse: Codable {
-    public let result: Account?
+    public var employee: Employee?
+    public var currentTask: Task?
+    public var activeCurrentTask: Bool?
+    public var isCaptain: Bool?
+    public var pendingTasks: [Task]?
 }
 
 public struct Account: Codable {
@@ -56,9 +60,11 @@ public struct Account: Codable {
 }
 
 public struct AuthorizationData {
-    public init(apiToken: String?) {
+    public init(apiToken: String? = nil, projectType: String? = nil) {
         self.apiToken = apiToken
+        self.projectType = projectType
     }
     
     public var apiToken: String?
+    public var projectType: String?
 }

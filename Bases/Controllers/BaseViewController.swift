@@ -64,4 +64,8 @@ class BaseViewController: UIViewController {
             scrollView.setContentOffset(CGPoint(x: 0, y: y), animated: true)
         }
     }
+    
+    @objc func internetDidBackOnline() {
+        
+    }
 }

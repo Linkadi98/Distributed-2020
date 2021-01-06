@@ -116,6 +116,7 @@ class URLRequestBuilder {
         var defaultHeader: [String: String] = [:]
         defaultHeader[ApiContants.contentType] = ApiContants.applicationJson
         defaultHeader[ApiContants.apiToken] = Repository.shared.authorizationData.apiToken
+        defaultHeader[ApiContants.projectType] = Repository.shared.authorizationData.projectType ?? "LUOI_DIEN"
         
         return defaultHeader.joined(header ?? [:])
     }
@@ -129,15 +130,39 @@ extension URLRequest {
                                headers: [String: String]? = nil,
                                parameters: Parameters? = nil) -> URLRequest {
         var header = [String: String]()
-        if let token = token {
-            /// for token
-        }
+//        if let token = token {
+//            /// for token
+//        }
         
         return URLRequestBuilder(endpoint: endpoint).configUrl(path: path,
                                                              method: method,
                                                              body: body,
                                                              headers: header,
                                                              parameters: parameters).build()
+    }
+    
+    static func formDataRequest(endpoint: EndpointPool = .dsd08, token: String? = nil,
+                                path: String,
+                                method: HTTPMethod,
+                                body: Data? = nil,
+                                headers: [String: String]? = nil,
+                                parameters: Parameters? = nil,
+                                forms: [MultipartFormDataType]) -> URLRequest{
+        let url = URLRequestBuilder(endpoint: endpoint).configUrl(path: path,
+                                                                   method: method,
+                                                                   parameters: parameters).build().url!
+        let builder = MultipartFormDataBuilder()
+        forms.forEach { builder.append($0) }
+        
+        var headers = [String: String]()
+        
+        headers[ApiContants.apiToken] = Repository.shared.authorizationData.apiToken
+        headers[ApiContants.projectType] = Repository.shared.authorizationData.projectType ?? "LUOI_DIEN"
+        
+        return URLRequest(multipartFormDataBuilder: builder,
+                          url: url,
+                          method: method,
+                          headers: headers)
     }
 }
 

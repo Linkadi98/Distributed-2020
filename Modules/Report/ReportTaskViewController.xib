@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportTaskViewController" customModule="Distributed2020" customModuleProvider="target">
+            <connections>
+                <outlet property="contentTextField" destination="Z3a-na-aXI" id="uyC-vA-Oyn"/>
+                <outlet property="imageCollectionView" destination="Njd-79-WJ4" id="9gr-GZ-aD2"/>
+                <outlet property="scrollView" destination="C1j-83-X9p" id="Nmj-mS-T3m"/>
+                <outlet property="sendReportButton" destination="F85-1W-0jj" id="02b-JC-n5o"/>
+                <outlet property="titleTextField" destination="n4W-sE-1zz" id="lN7-0P-rvc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="bnt-YM-3jx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-83-X9p">
+                    <rect key="frame" x="0.0" y="44" width="414" height="746"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHH-gS-E3c">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4W-sE-1zz" customClass="MPFloatLabeledSelectableTextField" customModule="Distributed2020" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="16" width="382" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="500" constant="50" id="094-xa-dOo"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Tiêu đề"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-na-aXI" customClass="MPFloatLabeledSelectableTextField" customModule="Distributed2020" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="82" width="382" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="500" constant="50" id="Cre-qV-LuL"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="UU9-Xf-QbB"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Nội dung"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Njd-79-WJ4">
+                                    <rect key="frame" x="16" y="148" width="382" height="590"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qnL-p4-zWX">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="n4W-sE-1zz" firstAttribute="top" secondItem="sHH-gS-E3c" secondAttribute="top" constant="16" id="8Jy-j0-2LM"/>
+                                <constraint firstItem="Z3a-na-aXI" firstAttribute="top" secondItem="n4W-sE-1zz" secondAttribute="bottom" constant="16" id="O56-su-x3G"/>
+                                <constraint firstAttribute="trailing" secondItem="Z3a-na-aXI" secondAttribute="trailing" constant="16" id="QJp-0k-g6J"/>
+                                <constraint firstItem="Njd-79-WJ4" firstAttribute="leading" secondItem="sHH-gS-E3c" secondAttribute="leading" constant="16" id="a9Z-O7-RBk"/>
+                                <constraint firstItem="Z3a-na-aXI" firstAttribute="leading" secondItem="sHH-gS-E3c" secondAttribute="leading" constant="16" id="l6x-Fe-TvF"/>
+                                <constraint firstAttribute="bottom" secondItem="Njd-79-WJ4" secondAttribute="bottom" constant="8" id="nsn-QT-oQy"/>
+                                <constraint firstItem="Njd-79-WJ4" firstAttribute="top" secondItem="Z3a-na-aXI" secondAttribute="bottom" constant="16" id="o2Y-9G-ujK"/>
+                                <constraint firstItem="n4W-sE-1zz" firstAttribute="leading" secondItem="sHH-gS-E3c" secondAttribute="leading" constant="16" id="pE7-pz-W3o"/>
+                                <constraint firstAttribute="trailing" secondItem="n4W-sE-1zz" secondAttribute="trailing" constant="16" id="qGX-Pb-7HL"/>
+                                <constraint firstAttribute="trailing" secondItem="Njd-79-WJ4" secondAttribute="trailing" constant="16" id="tLa-5c-6cB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="sHH-gS-E3c" firstAttribute="height" secondItem="C1j-83-X9p" secondAttribute="height" priority="750" id="6d0-pB-iZm"/>
+                        <constraint firstItem="sHH-gS-E3c" firstAttribute="top" secondItem="C1j-83-X9p" secondAttribute="top" id="PeR-dV-9w1"/>
+                        <constraint firstItem="sHH-gS-E3c" firstAttribute="leading" secondItem="C1j-83-X9p" secondAttribute="leading" id="Wz2-YU-TMm"/>
+                        <constraint firstAttribute="bottom" secondItem="sHH-gS-E3c" secondAttribute="bottom" id="XWg-jB-JjO"/>
+                        <constraint firstItem="sHH-gS-E3c" firstAttribute="width" secondItem="C1j-83-X9p" secondAttribute="width" id="glO-zq-7S3"/>
+                        <constraint firstAttribute="trailing" secondItem="sHH-gS-E3c" secondAttribute="trailing" id="slv-E6-DNf"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-gl-IDR">
+                    <rect key="frame" x="0.0" y="790" width="414" height="72"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F85-1W-0jj" customClass="ColoredButton" customModule="Distributed2020" customModuleProvider="target">
+                            <rect key="frame" x="16" y="12" width="382" height="48"/>
+                            <state key="normal" title="Gửi báo cáo"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="F85-1W-0jj" firstAttribute="leading" secondItem="N8g-gl-IDR" secondAttribute="leading" constant="16" id="5tX-Bl-KMe"/>
+                        <constraint firstItem="F85-1W-0jj" firstAttribute="top" secondItem="N8g-gl-IDR" secondAttribute="top" constant="12" id="Ckv-up-kHf"/>
+                        <constraint firstAttribute="height" constant="72" id="RCl-pn-JVI"/>
+                        <constraint firstAttribute="trailing" secondItem="F85-1W-0jj" secondAttribute="trailing" constant="16" id="WiA-h4-vKf"/>
+                        <constraint firstAttribute="bottom" secondItem="F85-1W-0jj" secondAttribute="bottom" constant="12" id="hbN-ww-Lag"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C1j-83-X9p" secondAttribute="trailing" id="0rZ-iF-Mrs"/>
+                <constraint firstItem="C1j-83-X9p" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EUz-Wh-4gz"/>
+                <constraint firstItem="C1j-83-X9p" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JnK-iA-yUK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C1j-83-X9p" secondAttribute="bottom" constant="72" id="h7Y-NV-ap7"/>
+                <constraint firstItem="N8g-gl-IDR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hzT-Az-rfc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="N8g-gl-IDR" secondAttribute="trailing" id="noV-OE-eR9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="N8g-gl-IDR" secondAttribute="bottom" id="x78-mi-AQQ"/>
+            </constraints>
+            <point key="canvasLocation" x="53.623188405797109" y="133.92857142857142"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="F85-1W-0jj">
+            <size key="intrinsicContentSize" width="97" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

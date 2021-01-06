@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Photos
 
 extension UIImage {
     
@@ -267,5 +268,67 @@ extension UIImage {
         }
         
         return fileURL
+    }
+    
+}
+
+extension UIImage {
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+    
+    /// Returns the data for the specified image in JPEG format.
+    /// If the image object’s underlying image data has been purged, calling this function forces that data to be reloaded into memory.
+    /// - returns: A data object containing the JPEG data, or nil if there was a problem generating the data. This function may return nil if the image has no data or if the underlying CGImageRef contains data in an unsupported bitmap format.
+    func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
+        return jpegData(compressionQuality: jpegQuality.rawValue)
+    }
+    
+    func png() -> Data? {
+        return pngData()
+    }
+}
+
+extension PHAsset {
+    func toImage(size: AssetUtils.ImageSize) -> UIImage {
+        AssetUtils.assetThumbnail(from: self, size: size)
+    }
+}
+
+extension PHAsset {
+    
+    var originalFilename: String? {
+        
+        var fname:String?
+        
+        if #available(iOS 9.0, *) {
+            let resources = PHAssetResource.assetResources(for: self)
+            if let resource = resources.first {
+                fname = resource.originalFilename
+            }
+        }
+        
+        if fname == nil {
+            // this is an undocumented workaround that works as of iOS 9.1
+            fname = self.value(forKey: "filename") as? String
+        }
+        
+        return fname
+    }
+}
+
+extension UIImage {
+    func resize(targetSize: CGSize) -> UIImage {
+        if #available(iOS 10.0, *) {
+            return UIGraphicsImageRenderer(size: targetSize).image { _ in
+                self.draw(in: CGRect(origin: .zero, size: targetSize))
+            }
+        } else {
+            return UIImage()
+        }
     }
 }

@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 import SwiftMessages
+import NVActivityIndicatorView
+import SCLAlertView
+import SwiftEntryKit
+import JGProgressHUD
+import DistributedAPI
 
 class AlertUtils {
     
@@ -35,7 +40,7 @@ class AlertUtils {
                                                 message: message,
                                                 preferredStyle: .alert)
         let okAction = UIAlertAction(title: okTitle,
-                                     style: .default,
+                                     style: .destructive,
                                      handler: { _ in okHandler?() })
         alertController.addAction(okAction)
         
@@ -92,6 +97,20 @@ class AlertUtils {
                             color: .successAlert,
                             textColor: .white,
                             iconImage: UIImage(named: "ic_dropdown_alert_success"))
+    }
+    
+    @discardableResult
+    static func showLoading(title: String? = nil, subTitle: String? = nil, in view: UIView) -> JGProgressHUD {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = title
+        hud.detailTextLabel.text = subTitle
+        hud.interactionType = .blockAllTouches
+        hud.position = .center
+        hud.show(in: view, animated: true)
+        
+        hud.dismiss(afterDelay: .init(30))
+        
+        return hud
     }
     
     /// source from Kien Nguyen - Sapo JSC
@@ -166,5 +185,47 @@ class AlertUtils {
         DispatchQueue.main.async {
             self.dropDownPresenter.show(config: config, view: view)
         }
+    }
+    
+    static func showLoadingView(message: String = "Vui lòng đợi..", duration: TimeInterval) {
+        
+    }
+    
+    static func showDropdownMessageView(message: String, duration: TimeInterval, in controller: UIViewController) {
+//        var attributes = EKAttributes()
+//        attributes.displayMode = .inferred
+//        attributes.displayDuration = duration
+//        attributes.position = .top
+//        attributes.popBehavior = .animated(animation: .translation)
+//        attributes.exitAnimation = .init(translate: .init(duration: 2), scale: .none, fade: .none)
+//        attributes.entryBackground = .visualEffect(style: .standard)
+//        attributes.screenInteraction = .absorbTouches
+//        attributes.precedence = .enqueue(priority: .max)
+//        attributes.shadow = .active(with: .init(opacity: 0.12, radius: 4))
+//        attributes.entranceAnimation = .translation
+//        attributes.windowLevel = .normal
+//
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
+//        customView.backgroundColor = .red
+        
+        // Create a basic toast that appears at the top
+        var attributes = EKAttributes.topToast
+        
+        // Set its background to white
+        attributes.entryBackground = .color(color: .white)
+        
+        // Animate in and out using default translation
+        attributes.entranceAnimation = .translation
+        attributes.exitAnimation = .translation
+        
+//        let customView = UIView()
+        /*
+         ... Customize the view as you like ...
+         */
+        
+        // Display the view with the configuration
+        SwiftEntryKit.display(entry: customView, using: attributes)
+        
+//        SwiftEntryKit.display(entry: customView, using: attributes, presentInsideKeyWindow: true)
     }
 }

@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>HelveticaNeue-UltraLight.ttf</string>
-		<string>HelveticaNeue-Medium.ttf</string>
-		<string>HelveticaNeue-BoldItalic.ttf</string>
-		<string>HelveticaNeue.ttf</string>
-		<string>HelveticaNeue-Italic.ttf</string>
-		<string>HelveticaNeue-Light.ttf</string>
-		<string>HelveticaNeue-Bold.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -30,8 +20,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Ứng dụng yêu cầu quyền truy cập máy ảnh</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>HelveticaNeue-UltraLight.ttf</string>
+		<string>HelveticaNeue-Medium.ttf</string>
+		<string>HelveticaNeue-BoldItalic.ttf</string>
+		<string>HelveticaNeue.ttf</string>
+		<string>HelveticaNeue-Italic.ttf</string>
+		<string>HelveticaNeue-Light.ttf</string>
+		<string>HelveticaNeue-Bold.ttf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

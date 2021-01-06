@@ -8,7 +8,16 @@
 import Foundation
 
 public extension Repository {
-    func login(sendingData: LoginRequest, completion: @escaping (Result<AccountResponse, Error>) -> Void) -> CancellableRequest {
-        return authApi.login(sendingData: sendingData, completion: completion)
+    func login(sendingData: LoginRequest, completion: @escaping (Result<AccountResponse, DataError>) -> Void) -> CancellableRequest {
+        return authApi.login(sendingData: sendingData, completion: {
+            self.handleResponse($0) { (r) in
+                switch r {
+                case .success(let res):
+                    completion(.success(res))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        })
     }
 }

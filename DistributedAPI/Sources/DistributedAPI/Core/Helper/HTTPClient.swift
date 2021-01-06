@@ -107,6 +107,8 @@ class HTTPClient {
             return
         }
         
+        print("Response body:", String(data: receivedData, encoding: .utf8) ?? "")
+        
         if method != .get, let responseBody = String(data: receivedData, encoding: .utf8) {
             print(TAG, "Response body:", responseBody)
         }

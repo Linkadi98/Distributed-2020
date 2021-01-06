@@ -102,7 +102,12 @@ class Presenter: NSObject {
     private var windowScene: UIWindowScene? {
         switch config.presentationContext {
         case .windowScene(let scene, _): return scene
-        default: return UIApplication.shared.keyWindow?.windowScene
+        default:
+            #if SWIFTMESSAGES_APP_EXTENSIONS
+            return nil
+            #else
+            return UIApplication.shared.keyWindow?.windowScene
+            #endif
         }
     }
 
@@ -434,7 +439,7 @@ class Presenter: NSObject {
     }
 
     private var becomeKeyWindow: Bool {
-        if config.becomeKeyWindow == .some(true) { return true }
+        if let becomeKeyWindow = config.becomeKeyWindow { return becomeKeyWindow }
         switch config.dimMode {
         case .gray, .color, .blur:
             // Should become key window in modal presentation style

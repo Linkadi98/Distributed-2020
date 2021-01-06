@@ -32,7 +32,7 @@ final class LoginViewController: BaseViewController {
     
     private func setupViews() {
         containerView = UIView(frame: .zero)
-        appImageView = UIImageView()
+        appImageView = UIImageView(image: UIImage(named: "ic_login_drone"))
         userTextField = .init(frame: .zero)
         passwordTextField = .init(frame: .zero)
         loginButton = .init(frame: .zero)
@@ -45,9 +45,11 @@ final class LoginViewController: BaseViewController {
         containerView.autoPinEdge(.leading, to: .leading, of: view)
         containerView.autoPinEdge(.trailing, to: .trailing, of: view)
         
-        appImageView.autoSetDimensions(to: CGSize(width: 40, height: 40))
+        appImageView.autoPinEdge(.leading, to: .leading, of: view)
+        appImageView.autoPinEdge(.trailing, to: .trailing, of: view)
+        appImageView.autoPinEdge(.top, to: .top, of: view)
         appImageView.autoAlignAxis(toSuperviewAxis: .vertical)
-        appImageView.autoPinEdge(toSuperviewEdge: .top, withInset: 0)
+        appImageView.autoPinEdge(.bottom, to: .top, of: containerView, withOffset: -40)
         
         userTextField.autoPinEdge(toSuperviewEdge: .top)
         passwordTextField.autoPinEdge(.top, to: .bottom, of: userTextField, withOffset: 16)
@@ -132,15 +134,15 @@ class LoginViewModel {
             self.shouldShowIndicator?(false)
             switch r {
             case .success(let response):
-                self.willMoveToApp(with: response.result)
+                self.willMoveToApp(with: response.employee)
             case .failure(let error):
-                print(error.localizedDescription)
+                AlertUtils.showError(error.errorMessage)
             }
         }
     }
     
-    private func willMoveToApp(with account: Account?) {
-        AccountManager.shared.save(account)
+    private func willMoveToApp(with emp: Employee?) {
+        AccountManager.shared.save(emp)
         AppDelegate.shared.replaceRootViewController(by: CommonTabbarController())
     }
 }

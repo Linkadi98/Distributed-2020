@@ -1,36 +1,64 @@
 PODS:
+  - AssetsPickerViewController (2.9.7):
+    - SnapKit
   - EmptyDataSet-Swift (5.0.0)
+  - JGProgressHUD (2.2)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
+  - OneSignal (3.0.1)
   - PureLayout (3.1.6)
-  - SwiftMessages (8.0.3):
-    - SwiftMessages/App (= 8.0.3)
-  - SwiftMessages/App (8.0.3)
+  - QuickLayout (3.0.0)
+  - SCLAlertView (0.8)
+  - SnapKit (5.0.1)
+  - SwiftEntryKit (1.2.6):
+    - QuickLayout (= 3.0.0)
+  - SwiftMessages (8.0.5):
+    - SwiftMessages/App (= 8.0.5)
+  - SwiftMessages/App (8.0.5)
   - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
+  - AssetsPickerViewController (~> 2.0)
   - EmptyDataSet-Swift (~> 5.0.0)
+  - JGProgressHUD
   - NVActivityIndicatorView
+  - OneSignal (< 4.0, >= 3.0.0)
   - PureLayout
+  - SCLAlertView
+  - SwiftEntryKit (= 1.2.6)
   - SwiftMessages
   - UIScrollView-InfiniteScroll (~> 1.1.0)
 
 SPEC REPOS:
   trunk:
+    - AssetsPickerViewController
     - EmptyDataSet-Swift
+    - JGProgressHUD
     - NVActivityIndicatorView
+    - OneSignal
     - PureLayout
+    - QuickLayout
+    - SCLAlertView
+    - SnapKit
+    - SwiftEntryKit
     - SwiftMessages
     - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
+  AssetsPickerViewController: 4343e10ace86e425097043c17efa145c1ec868ce
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  OneSignal: 29b4046637f63c7212785f47f0eb1f2472649285
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
-  SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftEntryKit: 96a2fa90b2631bbbfac50d18449e9ca3d0635f13
+  SwiftMessages: 539fd54a766bf08ec667e90aa141c44b8b8aaa55
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: fb445cea4dcfa4a061b6e014ed88f78e4dd1264a
+PODFILE CHECKSUM: 0a8aaeb3ef8dc7fd17eaed03fe8622c7b6dff8b3
 
 COCOAPODS: 1.9.3

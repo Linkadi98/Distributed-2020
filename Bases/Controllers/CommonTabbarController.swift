@@ -9,29 +9,24 @@ import Foundation
 import UIKit
 
 enum TabbarViewControllerTags: Int, CaseIterable {
-    case tasks = 0
-    case userInfo
-    case report
+    case userInfo = 0
+    case logout
     
     var tabbarItemImageName: String {
         switch self {
         case .userInfo:
-            return ""
-        case .report:
-            return ""
-        case .tasks:
-            return "ic_incident"
+            return "ic_task_info"
+        case .logout:
+            return "ic_account"
         }
     }
     
     var tabbarItemTitle: String {
         switch self {
         case .userInfo:
-            return ""
-        case .report:
-            return "2"
-        case .tasks:
-            return "Danh sách sự cố"
+            return "Chi tiết công việc"
+        case .logout:
+            return "Tài khoản"
         }
     }
 }
@@ -92,11 +87,9 @@ class CommonTabbarController: UITabBarController, UITabBarControllerDelegate {
         
         switch tag {
         case .userInfo:
-            viewController = UIViewController()
-        case .report:
-            viewController = UIViewController()
-        case .tasks:
-            viewController = IncidentTasksViewController()
+            viewController = IncidentStaffInfoViewController()
+        case .logout:
+            viewController = LogoutViewController()
         }
         
         viewController.tabBarItem.image = UIImage(named: tag.tabbarItemImageName)?.alwaysTemplate()

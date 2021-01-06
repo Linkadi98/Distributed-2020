@@ -26,13 +26,8 @@ class CustomXibView: UIView {
     }
     
     private func loadViews() {
-        guard let contentView = contentView else {
-            fatalError("contentView must be connected to xib")
-        }
-        
         Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
         addSubview(contentView)
-        
         contentView.autoPinEdgesToSuperviewEdges()
     }
     

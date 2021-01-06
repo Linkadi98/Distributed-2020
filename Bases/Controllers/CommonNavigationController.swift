@@ -23,6 +23,7 @@ class CommonNavigationController: UINavigationController {
         navigationBar.backIndicatorImage = UIImage(named: "BackIcon")
         navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "BackIcon")
         navigationBar.isTranslucent = false
+        navigationBar.tintColor = .icon
         
         navigationBar.shadowImage = UIImage()
         let backgroundImage = UIImage.from(color: .white)

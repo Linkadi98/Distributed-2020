@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040D25B42569405A00746AAD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D25B32569405A00746AAD /* LoginViewController.swift */; };
 		040D25BD2569414F00746AAD /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D25BC2569414F00746AAD /* ColoredButton.swift */; };
+		0422BB8325863E9F00559FBB /* AssetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BB8225863E9F00559FBB /* AssetUtils.swift */; };
 		043DDD6F2564A036007C30A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDD6E2564A036007C30A8 /* AppDelegate.swift */; };
 		043DDD732564A036007C30A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DDD722564A036007C30A8 /* ViewController.swift */; };
 		043DDD762564A036007C30A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DDD742564A036007C30A8 /* Main.storyboard */; };
@@ -42,9 +43,38 @@
 		04468D2525694A0B00269CA0 /* DistributedAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 04468D2425694A0B00269CA0 /* DistributedAPI */; };
 		04468D2A25696BBD00269CA0 /* UserDefault+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */; };
 		04468D2F25697EFC00269CA0 /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04468D2E25697EFC00269CA0 /* String+Exts.swift */; };
+		044C95B5258991D200242CB6 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C95B4258991D200242CB6 /* Consts.swift */; };
+		044C95BF2589927B00242CB6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044C95BE2589927B00242CB6 /* UserNotifications.framework */; };
+		044C95C12589927B00242CB6 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044C95C02589927B00242CB6 /* UserNotificationsUI.framework */; };
+		044C95C42589927B00242CB6 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C95C32589927B00242CB6 /* NotificationViewController.swift */; };
+		044C95C72589927B00242CB6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044C95C52589927B00242CB6 /* MainInterface.storyboard */; };
+		044C95CB2589927B00242CB6 /* NotificationExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 044C95BD2589927B00242CB6 /* NotificationExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0459B4122577319F00758EE7 /* TouchCompatibleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4112577319F00758EE7 /* TouchCompatibleScrollView.swift */; };
+		0459B4172577341200758EE7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459B4162577341200758EE7 /* AlertViewController.swift */; };
+		0460D8C125892268005DE13C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460D8BF25892268005DE13C /* TaskTableViewCell.swift */; };
+		0460D8C225892268005DE13C /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0460D8C025892268005DE13C /* TaskTableViewCell.xib */; };
+		0463A1562580587300548477 /* NotificationName+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463A1552580587300548477 /* NotificationName+Exts.swift */; };
 		046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D23302564F65F00A5D4CB /* AlertUtils.swift */; };
 		046FB19C25654BD300BEF95F /* UIViewController+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */; };
 		046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */; };
+		0480F56C257C861F00409EF1 /* ReportTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F56B257C861F00409EF1 /* ReportTaskViewController.swift */; };
+		0480F574257C881F00409EF1 /* ReportTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0480F573257C881F00409EF1 /* ReportTaskViewController.xib */; };
+		0480F579257C8A0800409EF1 /* IncidentStaffInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F578257C8A0800409EF1 /* IncidentStaffInfoViewModel.swift */; };
+		0480F589257C978A00409EF1 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F588257C978A00409EF1 /* AlertView.swift */; };
+		0480F58E257D0D3200409EF1 /* MPFloatLabeledSelectableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F58D257D0D3200409EF1 /* MPFloatLabeledSelectableTextField.swift */; };
+		0480F593257D0D4700409EF1 /* MPFloatLabeledSelectableTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0480F592257D0D4700409EF1 /* MPFloatLabeledSelectableTextField.xib */; };
+		0480F5A6257D415A00409EF1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F5A4257D415A00409EF1 /* ImageCollectionViewCell.swift */; };
+		0480F5A7257D415A00409EF1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0480F5A5257D415A00409EF1 /* ImageCollectionViewCell.xib */; };
+		0480F5AF257D438200409EF1 /* UICollectionView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F5AE257D438200409EF1 /* UICollectionView+Exts.swift */; };
+		0480F5B4257D43C100409EF1 /* UITableView+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480F5B3257D43C100409EF1 /* UITableView+Exts.swift */; };
+		0485EFDA257FD961002A6E5C /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485EFD9257FD961002A6E5C /* LogoutViewController.swift */; };
+		0485EFDF257FD98D002A6E5C /* LogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0485EFDE257FD98D002A6E5C /* LogoutViewController.xib */; };
+		04B1B5E12575505400795140 /* IncidentStaffInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B5E02575505400795140 /* IncidentStaffInfoViewController.swift */; };
+		04B1B5E62575507B00795140 /* IncidentStaffInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1B5E52575507B00795140 /* IncidentStaffInfoViewController.xib */; };
+		04B1B5EB257551E400795140 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B5EA257551E400795140 /* ShadowView.swift */; };
+		04B1B5F0257551F700795140 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B5EF257551F700795140 /* RoundedShadowView.swift */; };
+		04B1B5F525755FD800795140 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B5F425755FD800795140 /* BorderView.swift */; };
+		79A0833C90953A22FE909013 /* Pods_NotificationExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896E9256A7A4258CC4C85552 /* Pods_NotificationExt.framework */; };
 		F5594FE18539A51502AF3A8B /* Pods_Distributed2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +93,34 @@
 			remoteGlobalIDString = 043DDD6A2564A036007C30A8;
 			remoteInfo = Distributed2020;
 		};
+		044C95C92589927B00242CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043DDD632564A036007C30A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 044C95BC2589927B00242CB6;
+			remoteInfo = NotificationExt;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		044C95CF2589927B00242CB6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				044C95CB2589927B00242CB6 /* NotificationExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0231C586B240DEB48C71B36C /* Pods-NotificationExt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExt.release.xcconfig"; path = "Target Support Files/Pods-NotificationExt/Pods-NotificationExt.release.xcconfig"; sourceTree = "<group>"; };
 		040D25B32569405A00746AAD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		040D25BC2569414F00746AAD /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
+		0422BB8225863E9F00559FBB /* AssetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetUtils.swift; sourceTree = "<group>"; };
 		043DDD6B2564A036007C30A8 /* Distributed2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Distributed2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DDD6E2564A036007C30A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DDD722564A036007C30A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,11 +159,42 @@
 		04468D1F256948EB00269CA0 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Exts.swift"; sourceTree = "<group>"; };
 		04468D2E25697EFC00269CA0 /* String+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
+		044C95B4258991D200242CB6 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		044C95BD2589927B00242CB6 /* NotificationExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		044C95BE2589927B00242CB6 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		044C95C02589927B00242CB6 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		044C95C32589927B00242CB6 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		044C95C62589927B00242CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		044C95C82589927B00242CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0459B4112577319F00758EE7 /* TouchCompatibleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchCompatibleScrollView.swift; sourceTree = "<group>"; };
+		0459B4162577341200758EE7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		0460D8BF25892268005DE13C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		0460D8C025892268005DE13C /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		0463A1552580587300548477 /* NotificationName+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Exts.swift"; sourceTree = "<group>"; };
 		046D23302564F65F00A5D4CB /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		046FB19B25654BD300BEF95F /* UIViewController+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Exts.swift"; sourceTree = "<group>"; };
 		046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Exts.swift"; sourceTree = "<group>"; };
+		0480F56B257C861F00409EF1 /* ReportTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTaskViewController.swift; sourceTree = "<group>"; };
+		0480F573257C881F00409EF1 /* ReportTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTaskViewController.xib; sourceTree = "<group>"; };
+		0480F578257C8A0800409EF1 /* IncidentStaffInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentStaffInfoViewModel.swift; sourceTree = "<group>"; };
+		0480F588257C978A00409EF1 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		0480F58D257D0D3200409EF1 /* MPFloatLabeledSelectableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPFloatLabeledSelectableTextField.swift; sourceTree = "<group>"; };
+		0480F592257D0D4700409EF1 /* MPFloatLabeledSelectableTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPFloatLabeledSelectableTextField.xib; sourceTree = "<group>"; };
+		0480F5A4257D415A00409EF1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		0480F5A5257D415A00409EF1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		0480F5AE257D438200409EF1 /* UICollectionView+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Exts.swift"; sourceTree = "<group>"; };
+		0480F5B3257D43C100409EF1 /* UITableView+Exts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Exts.swift"; sourceTree = "<group>"; };
+		0485EFD9257FD961002A6E5C /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		0485EFDE257FD98D002A6E5C /* LogoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutViewController.xib; sourceTree = "<group>"; };
+		04B1B5E02575505400795140 /* IncidentStaffInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentStaffInfoViewController.swift; sourceTree = "<group>"; };
+		04B1B5E52575507B00795140 /* IncidentStaffInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncidentStaffInfoViewController.xib; sourceTree = "<group>"; };
+		04B1B5EA257551E400795140 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		04B1B5EF257551F700795140 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		04B1B5F425755FD800795140 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		57BF01430E67F878D7B60D83 /* Pods-Distributed2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020.debug.xcconfig"; path = "Target Support Files/Pods-Distributed2020/Pods-Distributed2020.debug.xcconfig"; sourceTree = "<group>"; };
 		82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Distributed2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		896E9256A7A4258CC4C85552 /* Pods_NotificationExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD43CEC39FAF09A35047A999 /* Pods-NotificationExt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExt.debug.xcconfig"; path = "Target Support Files/Pods-NotificationExt/Pods-NotificationExt.debug.xcconfig"; sourceTree = "<group>"; };
 		D163EC823161DE1C674D6D39 /* Pods-Distributed2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distributed2020.release.xcconfig"; path = "Target Support Files/Pods-Distributed2020/Pods-Distributed2020.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +222,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		044C95BA2589927B00242CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044C95C12589927B00242CB6 /* UserNotificationsUI.framework in Frameworks */,
+				044C95BF2589927B00242CB6 /* UserNotifications.framework in Frameworks */,
+				79A0833C90953A22FE909013 /* Pods_NotificationExt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				040D25B32569405A00746AAD /* LoginViewController.swift */,
+				0485EFD9257FD961002A6E5C /* LogoutViewController.swift */,
+				0485EFDE257FD98D002A6E5C /* LogoutViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -154,6 +250,15 @@
 			children = (
 				040D25BC2569414F00746AAD /* ColoredButton.swift */,
 				04468D1F256948EB00269CA0 /* AccountManager.swift */,
+				04B1B5EA257551E400795140 /* ShadowView.swift */,
+				04B1B5EF257551F700795140 /* RoundedShadowView.swift */,
+				04B1B5F425755FD800795140 /* BorderView.swift */,
+				0459B4112577319F00758EE7 /* TouchCompatibleScrollView.swift */,
+				0459B4162577341200758EE7 /* AlertViewController.swift */,
+				0480F588257C978A00409EF1 /* AlertView.swift */,
+				0480F58D257D0D3200409EF1 /* MPFloatLabeledSelectableTextField.swift */,
+				0480F592257D0D4700409EF1 /* MPFloatLabeledSelectableTextField.xib */,
+				044C95B4258991D200242CB6 /* Consts.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -167,6 +272,7 @@
 				043DDD6D2564A036007C30A8 /* Distributed2020 */,
 				043DDD842564A036007C30A8 /* Distributed2020Tests */,
 				043DDD8F2564A037007C30A8 /* Distributed2020UITests */,
+				044C95C22589927B00242CB6 /* NotificationExt */,
 				043DDD6C2564A036007C30A8 /* Products */,
 				B89057D903988747EE9B2A17 /* Pods */,
 				981A62CE3BA0A0EA8912BEDE /* Frameworks */,
@@ -179,6 +285,7 @@
 				043DDD6B2564A036007C30A8 /* Distributed2020.app */,
 				043DDD812564A036007C30A8 /* Distributed2020Tests.xctest */,
 				043DDD8C2564A036007C30A8 /* Distributed2020UITests.xctest */,
+				044C95BD2589927B00242CB6 /* NotificationExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +324,7 @@
 		043DDDA12564A067007C30A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0480F56A257C860600409EF1 /* Report */,
 				040D25B22569404100746AAD /* Login */,
 				04429FE225650C0500AAC4DE /* IncidentsTasks */,
 			);
@@ -250,6 +358,7 @@
 		043DDDB12564A3C5007C30A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0422BB8225863E9F00559FBB /* AssetUtils.swift */,
 				046D23302564F65F00A5D4CB /* AlertUtils.swift */,
 			);
 			path = Utils;
@@ -269,6 +378,9 @@
 				046FB1A025654D9E00BEF95F /* UIDevice+Exts.swift */,
 				04468D2925696BBD00269CA0 /* UserDefault+Exts.swift */,
 				04468D2E25697EFC00269CA0 /* String+Exts.swift */,
+				0480F5AE257D438200409EF1 /* UICollectionView+Exts.swift */,
+				0480F5B3257D43C100409EF1 /* UITableView+Exts.swift */,
+				0463A1552580587300548477 /* NotificationName+Exts.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				04429FE625650C7F00AAC4DE /* IncidentTasksViewController.swift */,
+				04B1B5E02575505400795140 /* IncidentStaffInfoViewController.swift */,
+				04B1B5E52575507B00795140 /* IncidentStaffInfoViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +439,7 @@
 		04429FE425650C4000AAC4DE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0480F578257C8A0800409EF1 /* IncidentStaffInfoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,6 +447,37 @@
 		04429FE525650C4C00AAC4DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0460D8BF25892268005DE13C /* TaskTableViewCell.swift */,
+				0460D8C025892268005DE13C /* TaskTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		044C95C22589927B00242CB6 /* NotificationExt */ = {
+			isa = PBXGroup;
+			children = (
+				044C95C32589927B00242CB6 /* NotificationViewController.swift */,
+				044C95C52589927B00242CB6 /* MainInterface.storyboard */,
+				044C95C82589927B00242CB6 /* Info.plist */,
+			);
+			path = NotificationExt;
+			sourceTree = "<group>";
+		};
+		0480F56A257C860600409EF1 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				0480F5A3257D412C00409EF1 /* Views */,
+				0480F56B257C861F00409EF1 /* ReportTaskViewController.swift */,
+				0480F573257C881F00409EF1 /* ReportTaskViewController.xib */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		0480F5A3257D412C00409EF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0480F5A4257D415A00409EF1 /* ImageCollectionViewCell.swift */,
+				0480F5A5257D415A00409EF1 /* ImageCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +486,9 @@
 			isa = PBXGroup;
 			children = (
 				82F7F1EE7E32DB8C95E01236 /* Pods_Distributed2020.framework */,
+				044C95BE2589927B00242CB6 /* UserNotifications.framework */,
+				044C95C02589927B00242CB6 /* UserNotificationsUI.framework */,
+				896E9256A7A4258CC4C85552 /* Pods_NotificationExt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,6 +498,8 @@
 			children = (
 				57BF01430E67F878D7B60D83 /* Pods-Distributed2020.debug.xcconfig */,
 				D163EC823161DE1C674D6D39 /* Pods-Distributed2020.release.xcconfig */,
+				CD43CEC39FAF09A35047A999 /* Pods-NotificationExt.debug.xcconfig */,
+				0231C586B240DEB48C71B36C /* Pods-NotificationExt.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -365,10 +516,12 @@
 				043DDD682564A036007C30A8 /* Frameworks */,
 				043DDD692564A036007C30A8 /* Resources */,
 				1F60693D9B0E2FE933FA90F1 /* [CP] Embed Pods Frameworks */,
+				044C95CF2589927B00242CB6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				044C95CA2589927B00242CB6 /* PBXTargetDependency */,
 			);
 			name = Distributed2020;
 			packageProductDependencies = (
@@ -414,13 +567,31 @@
 			productReference = 043DDD8C2564A036007C30A8 /* Distributed2020UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		044C95BC2589927B00242CB6 /* NotificationExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044C95CC2589927B00242CB6 /* Build configuration list for PBXNativeTarget "NotificationExt" */;
+			buildPhases = (
+				189CE293F1B90D81ECA89E87 /* [CP] Check Pods Manifest.lock */,
+				044C95B92589927B00242CB6 /* Sources */,
+				044C95BA2589927B00242CB6 /* Frameworks */,
+				044C95BB2589927B00242CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationExt;
+			productName = NotificationExt;
+			productReference = 044C95BD2589927B00242CB6 /* NotificationExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		043DDD632564A036007C30A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					043DDD6A2564A036007C30A8 = {
@@ -433,6 +604,9 @@
 					043DDD8B2564A036007C30A8 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 043DDD6A2564A036007C30A8;
+					};
+					044C95BC2589927B00242CB6 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -452,6 +626,7 @@
 				043DDD6A2564A036007C30A8 /* Distributed2020 */,
 				043DDD802564A036007C30A8 /* Distributed2020Tests */,
 				043DDD8B2564A036007C30A8 /* Distributed2020UITests */,
+				044C95BC2589927B00242CB6 /* NotificationExt */,
 			);
 		};
 /* End PBXProject section */
@@ -465,12 +640,18 @@
 				04429FB0256500EE00AAC4DE /* HelveticaNeue-Italic.ttf in Resources */,
 				04429FAD256500EE00AAC4DE /* HelveticaNeue-Medium.ttf in Resources */,
 				04429FAE256500EE00AAC4DE /* HelveticaNeue-BoldItalic.ttf in Resources */,
+				0485EFDF257FD98D002A6E5C /* LogoutViewController.xib in Resources */,
 				043DDD782564A036007C30A8 /* Assets.xcassets in Resources */,
 				043DDD762564A036007C30A8 /* Main.storyboard in Resources */,
+				0480F593257D0D4700409EF1 /* MPFloatLabeledSelectableTextField.xib in Resources */,
 				04429FB2256500EE00AAC4DE /* HelveticaNeue-Bold.ttf in Resources */,
+				04B1B5E62575507B00795140 /* IncidentStaffInfoViewController.xib in Resources */,
 				04429FAC256500EE00AAC4DE /* HelveticaNeue-UltraLight.ttf in Resources */,
+				0480F5A7257D415A00409EF1 /* ImageCollectionViewCell.xib in Resources */,
+				0460D8C225892268005DE13C /* TaskTableViewCell.xib in Resources */,
 				04429FAF256500EE00AAC4DE /* HelveticaNeue.ttf in Resources */,
 				04429FB1256500EE00AAC4DE /* HelveticaNeue-Light.ttf in Resources */,
+				0480F574257C881F00409EF1 /* ReportTaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,9 +669,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		044C95BB2589927B00242CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044C95C72589927B00242CB6 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		189CE293F1B90D81ECA89E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationExt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1F60693D9B0E2FE933FA90F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,13 +749,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				040D25B42569405A00746AAD /* LoginViewController.swift in Sources */,
+				04B1B5E12575505400795140 /* IncidentStaffInfoViewController.swift in Sources */,
+				0422BB8325863E9F00559FBB /* AssetUtils.swift in Sources */,
 				0442A02925652AC900AAC4DE /* UIView+Exts.swift in Sources */,
+				044C95B5258991D200242CB6 /* Consts.swift in Sources */,
 				043DDDD22564B728007C30A8 /* UIFont+Exts.swift in Sources */,
+				04B1B5F525755FD800795140 /* BorderView.swift in Sources */,
+				0463A1562580587300548477 /* NotificationName+Exts.swift in Sources */,
 				04468D20256948EB00269CA0 /* AccountManager.swift in Sources */,
+				0480F5A6257D415A00409EF1 /* ImageCollectionViewCell.swift in Sources */,
+				0480F579257C8A0800409EF1 /* IncidentStaffInfoViewModel.swift in Sources */,
 				04468D2A25696BBD00269CA0 /* UserDefault+Exts.swift in Sources */,
+				0480F56C257C861F00409EF1 /* ReportTaskViewController.swift in Sources */,
 				043DDDDF2564C166007C30A8 /* BaseListViewController.swift in Sources */,
 				040D25BD2569414F00746AAD /* ColoredButton.swift in Sources */,
+				0460D8C125892268005DE13C /* TaskTableViewCell.swift in Sources */,
 				043DDD732564A036007C30A8 /* ViewController.swift in Sources */,
+				04B1B5EB257551E400795140 /* ShadowView.swift in Sources */,
+				0459B4172577341200758EE7 /* AlertViewController.swift in Sources */,
 				0442A013256515CE00AAC4DE /* EmptyDataSetting.swift in Sources */,
 				043DDDC42564AB8D007C30A8 /* UIColor+Exts.swift in Sources */,
 				04429FFB25650EFE00AAC4DE /* NoBorderWithPaddingTextField.swift in Sources */,
@@ -552,9 +774,14 @@
 				043DDDDA2564BD49007C30A8 /* CustomXibView.swift in Sources */,
 				043DDDBC2564A5F7007C30A8 /* CommonTabbarController.swift in Sources */,
 				04429FE725650C7F00AAC4DE /* IncidentTasksViewController.swift in Sources */,
+				0485EFDA257FD961002A6E5C /* LogoutViewController.swift in Sources */,
+				0480F5AF257D438200409EF1 /* UICollectionView+Exts.swift in Sources */,
 				046FB1A125654D9E00BEF95F /* UIDevice+Exts.swift in Sources */,
 				043DDDE42564C22C007C30A8 /* Reachability.swift in Sources */,
 				046D23312564F65F00A5D4CB /* AlertUtils.swift in Sources */,
+				04B1B5F0257551F700795140 /* RoundedShadowView.swift in Sources */,
+				0480F58E257D0D3200409EF1 /* MPFloatLabeledSelectableTextField.swift in Sources */,
+				0459B4122577319F00758EE7 /* TouchCompatibleScrollView.swift in Sources */,
 				04468D2F25697EFC00269CA0 /* String+Exts.swift in Sources */,
 				043DDD6F2564A036007C30A8 /* AppDelegate.swift in Sources */,
 				043DDDAD2564A375007C30A8 /* CommonNavigationController.swift in Sources */,
@@ -562,6 +789,8 @@
 				046FB19C25654BD300BEF95F /* UIViewController+Exts.swift in Sources */,
 				043DDDB42564A3ED007C30A8 /* UIImage+Exts.swift in Sources */,
 				04429FEF25650CCA00AAC4DE /* NoPermissionViewController.swift in Sources */,
+				0480F589257C978A00409EF1 /* AlertView.swift in Sources */,
+				0480F5B4257D43C100409EF1 /* UITableView+Exts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +810,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		044C95B92589927B00242CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044C95C42589927B00242CB6 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -593,6 +830,11 @@
 			isa = PBXTargetDependency;
 			target = 043DDD6A2564A036007C30A8 /* Distributed2020 */;
 			targetProxy = 043DDD8D2564A036007C30A8 /* PBXContainerItemProxy */;
+		};
+		044C95CA2589927B00242CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 044C95BC2589927B00242CB6 /* NotificationExt */;
+			targetProxy = 044C95C92589927B00242CB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -611,6 +853,14 @@
 				043DDD7A2564A036007C30A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		044C95C52589927B00242CB6 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044C95C62589927B00242CB6 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -667,7 +917,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -722,7 +972,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -856,6 +1106,48 @@
 			};
 			name = Release;
 		};
+		044C95CD2589927B00242CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD43CEC39FAF09A35047A999 /* Pods-NotificationExt.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NBAJ2RV8ZK;
+				INFOPLIST_FILE = NotificationExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = minhpham.Distributed2020.NotificationExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		044C95CE2589927B00242CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0231C586B240DEB48C71B36C /* Pods-NotificationExt.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NBAJ2RV8ZK;
+				INFOPLIST_FILE = NotificationExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = minhpham.Distributed2020.NotificationExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -891,6 +1183,15 @@
 			buildConfigurations = (
 				043DDD9C2564A037007C30A8 /* Debug */,
 				043DDD9D2564A037007C30A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		044C95CC2589927B00242CB6 /* Build configuration list for PBXNativeTarget "NotificationExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044C95CD2589927B00242CB6 /* Debug */,
+				044C95CE2589927B00242CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

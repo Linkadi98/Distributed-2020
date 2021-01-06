@@ -118,7 +118,8 @@ class BaseListViewController<T>: BaseViewController {
     
     private func setupTableView() {
         if tableView == nil {
-            tableView = UITableView(frame: .zero, style: .grouped)
+            tableView = UITableView(frame: .zero, style: .plain)
+            tableView.tableFooterView = UIView()
             view.addSubview(tableView)
             tableView.autoPinEdgesToSuperviewEdges()
         }
